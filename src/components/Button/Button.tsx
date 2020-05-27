@@ -16,7 +16,7 @@ const ripple = (color?: string) => css`
     top: 0;
     left: 0;
     pointer-events: none;
-    background-image: ${props => `radial-gradient(circle, ${color && props.theme[color] || props.theme.white } 10%, transparent 10.01%)`};
+    background-image: ${props => `radial-gradient(circle, ${color && props.theme[color] || 'white' } 10%, transparent 10.01%)`};
     background-repeat: no-repeat;
     background-position: 50%;
     transform: scale(10, 10);
@@ -60,20 +60,20 @@ interface ButtonProps {
 function getVariantStyles(variant: string, color: string, disabled: boolean) {
   const outlined = css`
   background-color: ${props => props.theme.white};
-  border:           ${props => disabled ? props.theme.gray3 : props => color && props.theme[color] || props.theme.blue} 2px solid;
-  color:            ${props => disabled ? props.theme.gray3 : color && props.theme[color] || props.theme.blue};
+  border:           ${props => disabled ? props.theme.gray3 : props => color && props.theme[color] || props.theme.primary} 2px solid;
+  color:            ${props => disabled ? props.theme.gray3 : color && props.theme[color] || props.theme.primary};
   `
   const solid = css`
     box-shadow:       0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    background-color: ${props => disabled ? props.theme.gray3 : (color && props.theme[color]) || props.theme.blue};
+    background-color: ${props => disabled ? props.theme.gray3 : (color && props.theme[color]) || props.theme.primary};
     color:            ${props => props.theme.white};
     ${ripple()}
     :hover {
-    background-color: ${props => disabled ? props.theme.gray3 : lightenDarkenColor((color && props.theme[color]) || props.theme.blue, -.25)};
+    background-color: ${props => disabled ? props.theme.gray3 : lightenDarkenColor((color && props.theme[color]) || props.theme.primary, -.25)};
   }`
 
   const text = css`
-    color:            ${props => disabled ? props.theme.gray3 : color && props.theme[color] || props.theme.blue};
+    color:            ${props => disabled ? props.theme.gray3 : color && props.theme[color] || props.theme.primary};
     background:       transparent;
   `
 

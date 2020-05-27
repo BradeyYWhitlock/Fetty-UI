@@ -11,7 +11,7 @@
     "build-dist": "rm -rf dist && npm run test &&  npm run tsc && cp -r ./src/assets ./dist",
     "build-storybook": "build-storybook --docs -c .storybook -o dist",
     "deploy-storybook": "rm -rf dist && npm run build-storybook && npm run s3Sync",
-    "s3Sync": "aws s3 sync ./dist s3://fetty-ui --delete --profile=development",
+    "s3Sync": "aws s3 sync ./dist s3://fetty-ui --delete",
     "tsc": "tsc"
   },
   "publishConfig": {
