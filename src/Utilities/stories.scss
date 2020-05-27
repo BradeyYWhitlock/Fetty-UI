@@ -1,0 +1,50 @@
+.separateComponents {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.smallBox {
+    height: 100px;
+}
+
+.smallMediumBox {
+    height: 200px;
+}
+
+.mediumBox {
+    height: 250px;
+}
+
+.largeBox {
+    height: 500px;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.styledFont {
+    line-height: 36px;
+    font-family: ProximaNova, Roboto, sans-serif;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.margin {
+    margin: 10px
+}
+
+.padding {
+    padding: 10px
+}
+
+.darkerBackground {
+    background-color: #999999;
+}

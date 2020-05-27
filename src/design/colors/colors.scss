@@ -1,0 +1,58 @@
+
+.colorStory {
+    height: 168px;
+    width: 200px;
+    margin: 10px 20px 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #CCCCCC;
+}
+
+.colorCategory {
+    display: flex;
+    margin-bottom: 80px;
+    flex-direction: column;
+}
+
+.categoryName {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: ProximaNova, Roboto, sans-serif;
+}
+
+.colorWithName {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color {
+    height: 100px;
+    width: 200px;
+    border-bottom: 1px solid #CCCCCC;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.displayColors {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.colorNameContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colorName {
+    font-family: ProximaNova, Roboto, sans-serif;
+    padding: 10px;
+    font-size: 20px;
+    width: 180px;
+    text-align: left;
+}

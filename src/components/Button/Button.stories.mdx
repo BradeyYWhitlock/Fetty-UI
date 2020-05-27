@@ -1,0 +1,84 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Button } from './Button';
+import { ThemeProvider } from "styled-components";
+import FettyTheme from '../../Theme/ThemeProvider'
+import theme from '../../Theme/Theme'
+import '../../Utilities/stories.scss'
+
+<Meta title="Components/Button/Button" />
+
+## Usage
+
+```js
+import {Button} from 'shamrock-clover-ui'
+```
+
+### Default
+
+A default button.
+
+<Preview>
+  <Story name='button'>
+      <FettyTheme>
+        <Button>Example</Button>
+      </FettyTheme>
+  </Story>
+</Preview>
+
+### Colors
+
+There are different colors of buttons using shamrocks theme.
+The colors are `blue` (default), `red`, `yellow`, and `green`.
+
+<Preview>
+  <Story name='color'>
+      <FettyTheme>
+        <div className='separateComponents'>
+          <Button>Example</Button>
+          <Button color='red'>Example</Button>
+          <Button color='yellow'>Example</Button>
+          <Button color='green'>Example</Button>
+        </div>
+    </FettyTheme>
+  </Story>
+</Preview>
+
+### Variants
+
+There are different variants of buttons using shamrocks theme.
+The variants are `solid` (default), `outlined`, and `text`.
+
+<Preview>
+  <Story name='variant'>
+      <FettyTheme>
+        <div className='separateComponents'>
+          <Button>Example</Button>
+          <Button variant='outlined'>Example</Button>
+          <Button variant='text'>Example</Button>
+        </div>
+    </FettyTheme>
+  </Story>
+</Preview>
+
+### Disabled
+
+A button can be disbaled.
+
+<Preview>
+  <Story name='disabled'>
+      <FettyTheme>
+      <Button disabled={true}>Example</Button>
+    </FettyTheme>
+  </Story>
+</Preview>
+
+***
+
+### Props
+
+| Name    | options               | Required | Type   | Default Value       | Description               |
+|---------|-----------------------|----------|--------|---------------------|---------------------------|
+| height  |                       | optional | string | 36px                | Height of Button          |
+| width   |                       | optional | string | 100px               | Width of Button           |
+| color   | red, yellow, green    | optional | string | blue (#0083CA)      | Color of Button           |
+| variant | solid, outlined, text | optional | string | solid               | Style variation of Button |
